@@ -1,2 +1,2 @@
-This is a Dokcer file
+This is a Dockerfile
 fixed the review comments
