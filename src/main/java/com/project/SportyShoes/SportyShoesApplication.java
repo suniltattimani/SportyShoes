@@ -1,4 +1,3 @@
-/* This is to test the java working style in IDE */
 package com.project.SportyShoes;
 
 import org.springframework.boot.SpringApplication;
