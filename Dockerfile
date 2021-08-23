@@ -1,8 +1,6 @@
-FROM openjdk:16-alpine3.13
+FROM maven
 WORKDIR /app
-COPY src /app
-COPY pom.xml /app
-RUN mvn clean \
-    mvn install
+COPY . /app
+RUN mvn clean install
 EXPOSE 8080
 
