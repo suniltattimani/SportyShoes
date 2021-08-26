@@ -10,13 +10,16 @@ pipeline {
     } 
     stage ("Creating docker image of Java app") {
 	    steps {
-            script {
+           sh '''
                 pwd
                 echo "Building DOcker image"
                 docker build -t jenkins-image .
-                if ($? -ne 0)
+                if ["$?" -ne "0"];then
                     echo "Docker image creation failed"
-            }
+		    
+		fi
+	   '''
+  
        }
    }
     stage ("Deploying the java app") {
