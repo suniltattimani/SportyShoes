@@ -12,6 +12,8 @@ pipeline {
 	    steps {
            sh '''
                 pwd
+		cd SportyShoes
+		pwd
                 echo "Building DOcker image"
                 docker build -t jenkins-image .
                 if ["$?" -ne "0"];then
