@@ -17,7 +17,7 @@ pipeline {
 	steps {
 
          sh "pwd"
-	 sh "docker -t java_app Dockerfile"
+	 sh "docker -t java_app ."
          if ($? -ne 0) {
 	     print "Docker image creation  failed"
          }
